@@ -2,7 +2,7 @@ import React from "react";
 
 class Button extends React.Component {
   shouldComponentUpdate(nextProps) {
-    const { change: currentChange, locale:currentLocale } = this.props;
+    const { change: currentChange, locale: currentLocale } = this.props;
     const { change: nextChange, locale: nextLocale } = nextProps;
     if (currentChange === nextChange && currentLocale === nextLocale) {
       return false;
@@ -11,11 +11,15 @@ class Button extends React.Component {
   }
   render() {
     console.log("buttom component render");
-    const { change, locale } = this.props;
+    const { change, locale, show, enable } = this.props;
+    if (!enable) return null;
     return (
-      <button type="button" onClick={()=>change(locale)}>
-        Click Here
-      </button>
+      <>
+        <button type="button" onClick={() => change(locale)}>
+          {locale === "bn-BD" ? "Change Clock" : "ঘড়ি পরিবর্তন করুন"}
+        </button>
+        {show && <p>Hello</p>}
+      </>
     );
   }
 }
