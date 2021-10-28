@@ -1,14 +1,9 @@
-import ClockList from "./components/ClockList";
-import Form from "./components/Form";
+// import ClockList from "./components/ClockList";
+// import Form from "./components/Form";
+import Calculator from "./components/Calculator";
 function App() {
-  const quantities = [1];
-  console.log("app component render");
-  return (
-    <div>
-      <ClockList quantities={quantities} />
-      <Form />
-    </div>
-  );
+  //const quantities = [1];
+  return <Calculator />;
 }
 
 export default App;
