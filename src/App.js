@@ -1,9 +1,9 @@
-// import ClockList from "./components/ClockList";
-// import Form from "./components/Form";
-import Calculator from "./components/Calculator";
+import ClockList from "./components/ClockList";
+//import Calculator from "./components/Calculator";
 function App() {
-  //const quantities = [1];
-  return <Calculator />;
+  const quantities = [1,2];
+  return <ClockList quantities={quantities} />
+  //return <Calculator />;
 }
 
 export default App;
